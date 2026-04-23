@@ -1,4 +1,4 @@
-class SortApplication {
+object SortApplication {
   def display(a : Array[Int]) : Unit = {
     print(a.mkString(","))
   }
@@ -8,7 +8,7 @@ class SortApplication {
     var invertedSortedArray :  Array[Int] = InvertedSortedArrayFactory.create(size)
     var randomArray :  Array[Int] = RandomArrayFactory.create(size)
     var shuffleArrayFactory :  Array[Int] = ShuffleArrayFactory.create(size)
-    print(almostSortedArray.mkString(",") + '\n' + invertedSortedArray.mkString(",")
-      + randomArray.mkString(",") + shuffleArrayFactory.mkString(","))
+    print(almostSortedArray.mkString(",") + '\n' + invertedSortedArray.mkString(",") + '\n' +
+      randomArray.mkString(",") + '\n' + shuffleArrayFactory.mkString(","))
   }
 }
