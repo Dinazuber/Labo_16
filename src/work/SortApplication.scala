@@ -14,18 +14,29 @@ object SortApplication {
     var arrays : Array[Array[Int]] = Array(almostSortedArray, invertedSortedArray, randomArray, shuffleArrayFactory)
     var temp = arrays.map(_.clone()) //Deep clone of the table
 
-    for(i <- arrays.indices){
+    testAlgo(arrays, temp, selection)
+  }
+
+  /**
+   * Doing 1 test of the 2 algorithms
+   * @param a Table of numbers
+   * @param b Same table but must be a clone of A for better result
+   * @param selection Your selection sort code!
+   */
+  def testAlgo(a : Array[Array[Int]], b : Array[Array[Int]], selection: Sort) : Unit = {
+
+    for(i <- a.indices){
       println("Before : ")
-      display(arrays(i))
+      display(a(i))
       println("Y sort : ")
-      YSort.sort(arrays(i))
-      display(arrays(i))
+      YSort.sort(a(i))
+      display(a(i))
       println("------")
       println("Before : ")
-      display(temp(i))
+      display(b(i))
       println("Selection sort : ")
-      selection.sort(temp(i))
-      display(temp(i))
+      selection.sort(b(i))
+      display(b(i))
       println("----------------")
     }
   }
