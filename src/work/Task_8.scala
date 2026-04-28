@@ -42,5 +42,15 @@ object Task_8 extends App {
     result
   }
 
-  println(s"The result : ${findSize(SelectionSort, InvertedSortedArrayFactory, 1)}")
+  def TestCode(size: Int) : Unit = {
+    val start = System.nanoTime()
+    SelectionSort.sort(InvertedSortedArrayFactory.create(size))
+    val end = System.nanoTime()
+
+    println(s"it took ${(end - start) / math.pow(10, 9)} seconds")
+  }
+
+  var size =  findSize(SelectionSort, InvertedSortedArrayFactory, 1)
+  println(s"The result : ${size}")
+  TestCode(size)
 }
