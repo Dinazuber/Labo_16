@@ -1,5 +1,5 @@
 object AlmostSortedArrayFactory extends App with ArrayFactory {
-  override def create(size: Int): Array[Int] = {
+  def create(size: Int): Array[Int] = {
     val percentage: Int = 50
     var almostSortedArray: Array[Int] = (0 until size).toArray
     val swap: Int = (size * percentage) / 100
