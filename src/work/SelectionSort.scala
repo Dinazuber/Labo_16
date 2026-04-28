@@ -1,5 +1,5 @@
 object SelectionSort extends Sort {
-  override def sort(a: Array[Int]): Array[Int] = {
+  def sort(a: Array[Int]): Array[Int] = {
     var firstID : Int = 0
     var minId: Int = 0
     for(i: Int <- a.indices){

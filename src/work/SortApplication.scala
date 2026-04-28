@@ -3,7 +3,7 @@ object SortApplication {
     println(a.mkString(","))
   }
   def main(args : Array[String]) : Unit = {
-    val size : Int = 10000
+    val size : Int = 100000
     var almostSortedArray :  Array[Int] = AlmostSortedArrayFactory.create(size)
     var invertedSortedArray :  Array[Int] = InvertedSortedArrayFactory.create(size)
     var randomArray :  Array[Int] = RandomArrayFactory.create(size)
